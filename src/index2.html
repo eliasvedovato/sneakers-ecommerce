@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers.com</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik&display=swap" rel="stylesheet">
+    <script src="consulta.js"></script>
+</head>
+<body onload="inicio()">
+    <header>
+        <nav class="nav-main">
+            <span class="nav-sneaker">sneakers</span>
+            <a href="#" class="nav-links after">Collections</a>
+            <a href="#" class="nav-links">Men</a>
+            <a href="#" class="nav-links">Women</a>
+            <a href="#" class="nav-links">About</a>
+            <a href="#" class="nav-links">Contact</a>
+            <img class="carro" src="../images/icon-cart.svg">
+            <img class="avatar" src="../images/image-avatar.png">
+        </nav>
+    </header> 
+
+    <main>
+
+        <div class="lightboxes">
+            
+            <div class="lightbox" id="item-1">
+                <div class="lightbox__content">
+                    <a href="#" class="close"></a>
+                    <img src="../images/image-product-1.jpg" width="700" height="700">
+                </div>
+            </div>
+            <div class="lightbox" id="item-1">
+                <div class="lightbox__content">
+                    <a href="#" class="close"></a>
+                    <img src="../images/image-product-1.jpg" alt="" width="700" height="700">
+                </div>
+            </div>
+            <div class="lightbox" id="item-2">
+                <div class="lightbox__content">
+                    <a href="#" class="close"></a>
+                    <img src="../images/image-product-2.jpg" alt="" width="700" height="700">
+                </div>
+            </div>
+            <div class="lightbox" id="item-3">
+                <div class="lightbox__content">
+                    <a href="#" class="close"></a>
+                    <img src="../images/image-product-3.jpg" alt="" width="700" height="700">
+                </div>
+            </div>
+            <div class="lightbox" id="item-4">
+                <div class="lightbox__content">
+                    <a href="#" class="close"></a>
+                    <img src="../images/image-product-4.jpg" alt="" width="700" height="700">
+                </div>
+            </div>
+            
+        </div>
+        
+        <section class= "imgs">
+            <a href="#item-1">
+                <img class="img" src="../images/image-product-1.jpg" width="450">
+            </a>
+            
+            <div class="small-imgs">
+                <a href="#item-1">
+                    <img src="../images/image-product-1-thumbnail.jpg" width="80">
+                </a>
+                <a href="#item-2">
+                    <img src="../images/image-product-2-thumbnail.jpg" width="80">
+                </a>
+                <a href="#item-3">
+                    <img src="../images/image-product-3-thumbnail.jpg" width="80">
+                </a>
+                <a href="#item-4">
+                    <img src="../images/image-product-4-thumbnail.jpg" width="80">
+                </a>
+            </div>
+        </section>
+        
+        <section class="info">
+            <h5 class="company">SNEAKER COMPANY</h5>
+            <h1 class="h1">Fall Limited Edition <br> Sneakers</h1>
+            <p class="p1">These low-profile sneakers are your perfect casual wear <br> companion.
+                Featuriong a durable rubber outer sole, they´ll <br> withstand everything
+                the weather can offer.
+            </p>
+            <div class="price">
+                <strong>
+                    <span style="font-size: 25px;">$125.00</span>
+                    <span class="discount">50%</span><br>
+                    <span class="precio-tachado">$250.00</span>
+                </strong>
+            </div>
+            <div class="price-2">
+                <div class="quantity">
+                    <span><img src="../images/icon-minus.svg" alt="minus" class="minus"></span>
+                    <span class="numero"><strong>0</strong></span>
+                    <span><img src="../images/icon-plus.svg" alt="plus" class="plus"></span>
+                </div>
+                <div class="carrito-main">
+                    <img src="../images/icon-cart.svg" alt="carrito" class="carrito">
+                    <strong>Add to cart</strong>
+                </div>
+            </div>
+        </section>
+        
+        <div id="tarjetasProductos" class="products-grid"></div>
+    </main>
+    
+    <!-- <article class="products-grid">
+        
+        <section class="articulo-1 articulos">
+            <div class="container-img">
+                <img src="../images/zapas-1.jpg" alt="" height="250px">
+            </div>
+            <h2>Nike Air Force 1</h2>
+            <h4>Colorway: White</h4>
+            <h5>Precio: $300</h5>
+            <strong>Add to cart</strong>
+        </section>
+        <section class="articulo-2 articulos">
+            <div class="container-img">
+                <img src="../images/zapas-2.jpg" alt="" height="250px">
+            </div>
+            <h2>Nike Air Max 1</h2>
+            <h4>Colorway: Black, White and Red</h3>
+            <h5>Precio: $250</h5>
+            <strong>Add to cart</strong>
+        </section>
+        <section class="articulo-3 articulos">
+            <div class="container-img">
+                <img src="../images/zapas-3.jpg" alt="" height="250px">
+            </div>
+            <h2>Nike Air Max 90 Summit</h2>
+            <h4>Colorway: White/Chile Red/Bleached Aqua</h4>
+            <h5>Precio: $370</h5>
+            <strong>Add to cart</strong>
+        </section>
+        <section class="articulo-4 articulos">
+            <div class="container-img">
+                <img src="../images/zapas-4.jpg" alt="" height="250px">
+            </div>
+            <h2>Nike Air Jordan 1</h2>
+            <h4>Colorway: Yellow Ochre</h4>
+            <h5>Precio: $350</h5>
+            <strong>Add to cart</strong>
+        </section>
+
+    </article> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>

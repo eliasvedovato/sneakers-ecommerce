@@ -1,0 +1,243 @@
+* {
+font-family: 'Rubik', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+box-sizing: border-box;
+transition: all .2s linear;
+}
+
+.nav-main {
+    height: 100px;
+    width: 100%;
+    border-bottom: 0.5px solid rgb(224, 211, 211);
+    display: flex; align-items: center;
+    justify-content: space-evenly;
+}
+@media screen and (min-width: 830px) {
+    .nav-main a{
+        display: flex; flex-direction: column;
+        /* height: 15rem; */
+    }
+}
+.nav-links{
+    color: #999794;
+    font-size: 15px;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    position: relative;
+}
+.nav-links:hover{
+    color: #F08A00;
+}
+.nav-links:hover::after{
+    content: '';
+    height: .5rem;
+    background-color: #F08A00;
+    position: absolute;
+    top: 3.5rem; left: 0%;
+    width: 100%;
+}
+.nav-sneaker {
+    font-size: 30px;
+    font-weight: 800;
+}
+.carro{
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+}
+.avatar{
+    background-color: #F08A00;
+    border: 2px solid #F08A00;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+img{
+    cursor: pointer;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+main{
+    padding: 50px 1%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 0;
+}
+
+.small-imgs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.info{
+    padding: 50px;
+    margin: 25px 50px 50px 50px;
+}
+.info:hover{
+    box-shadow: 0 12px 24px hsla(0, 0%, 10%, .2);
+}
+.h1{
+    font-size: 40px;
+}
+
+.company {
+    height: 0.5px;
+    color: #F08A00;
+    font-size: 10px;
+}
+
+.p1 {
+    color: #B1B0AF;
+    font-size: 12px;
+}
+
+.discount {
+    background-color: #f5e9d7;
+    border-radius: 5px;
+    padding: 2.5px 5px;
+    color: #F08A00;
+    margin-left: 10px;
+}
+
+.precio-tachado {
+    text-decoration:line-through;
+    color: #B1B0AF;
+    font-size: 12px;
+}
+
+.carrito-main {
+    background-color: #F08A00;
+    padding: 10px 20px 10px 30px;
+    margin-left: 15px;
+    border-radius: 4px;
+    font-size: 10px;
+    color: #fff;
+    width: 8.5rem;
+}
+
+.carrito-main:hover{
+    cursor: pointer;
+    background-color: #fab048;
+}
+
+.carrito {
+    height: 10px;
+    margin-right: 5px;
+}
+
+.price-2 {
+    margin: 10px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.quantity {
+    background-color: rgb(237, 243, 240);
+    border-radius: 4px;
+    padding: 8px 25px;
+    width: 8.5rem;
+}
+
+.numero{
+    font-size: 11px;
+}
+
+.minus {
+    padding-right: 20px;
+    padding-bottom: 2px;
+    height: 5px;
+    cursor: pointer;
+}
+
+.plus {
+    padding-left: 20px;
+    height: 8px;
+    cursor: pointer;
+}
+.lightbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, .4);
+    display: flex; justify-content: center;
+    align-items: center;
+    transform: scale(0, 1);
+    transform-origin: right;
+    transition: transform ease-in-out 500ms;
+}
+.lightbox:target{
+    transform: scale(1, 1);
+    transform-origin: left;
+}
+.lightbox__content{
+    position: relative;
+    background: rgba(0, 0, 0, .05);
+    padding: 1em;
+}
+.close{
+    position: absolute;
+    width: 2em; height: 2em;
+    background: red;
+    top: -1em; right: -1em;
+    border-radius: 50%;
+    display: flex; justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.close::after{
+    content: 'X';
+    color: #fff;
+    font-weight: 700;
+}
+
+.products-grid{
+    display: grid;
+    gap: 1rem; margin-top: 4rem;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.container-img{
+    width: 100%;
+    padding: .9rem;
+    display: flex;
+    justify-content: center;
+}
+.container-img > img{
+    object-fit: cover;
+}
+.articulos > strong{
+    background-color: #F08A00;
+    border-radius: 3px;
+    padding: 0.4rem;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.articulos > strong:hover{
+    background-color: #fab048;
+}
+.articulos{
+    overflow: hidden;
+    border-radius: .3rem;
+    padding: 0.5rem;
+    width: 100%;
+
+}
+.articulos:hover{
+    box-shadow: 0 12px 24px hsla(0, 0%, 10%, .5);
+}
