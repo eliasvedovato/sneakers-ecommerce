@@ -59,9 +59,16 @@ function consultaProductoServidor() {
 function consultaCotizacion(){
     let monedas = {};
 
-    $.get('https://api.bluelytics.com.ar/v2/latest'), (data) => {
+    $.get('https://api.bluelytics.com.ar/v2/latest', (data) => {
         console.log(data);
         monedas = data;
-    }
+    })
     return monedas;
+    // fetch('https://api.bluelytics.com.ar/v2/latest')
+    // .then( (resp) => resp.json () )
+    // .then( (data) => {
+    // console.log(data)
+    // monedas = data;
+    // })
+    // return monedas;
 }
