@@ -13,12 +13,35 @@ transition: all .2s linear;
     display: flex; align-items: center;
     justify-content: space-evenly;
 }
-@media screen and (min-width: 830px) {
-    .nav-main a{
+
+@media screen and (max-width: 830px) {
+    .nav-main{
         display: flex; flex-direction: column;
-        /* height: 15rem; */
+        height: 15rem;
+        transition: .4s;
+    }
+    .nav-main a{
+        font-size: 1.2rem;
+    }
+    .nav-links:hover::after{
+        content: '';
+        height: .9rem;
+        background-color: #F08A00;
+        position: absolute;
+        top: .5rem; left: 0%;
+        width: 100%;
     }
 }
+/* @media screen and (max-width: 768px){
+    .nav-main a{
+        display: none;
+
+    }
+    .nav.main{
+        display: flex;
+        justify-content: flex-end;
+    }
+} */
 .nav-links{
     color: #999794;
     font-size: 15px;
