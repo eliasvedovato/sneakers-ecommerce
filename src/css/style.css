@@ -1,9 +1,11 @@
 * {
-font-family: 'Rubik', sans-serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Poppins', sans-serif;
-box-sizing: border-box;
-transition: all .2s linear;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    transition: all .2s linear;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-main {
@@ -13,12 +15,23 @@ transition: all .2s linear;
     display: flex; align-items: center;
     justify-content: space-evenly;
 }
+
 @media screen and (min-width: 830px) {
     .nav-main a{
         display: flex; flex-direction: column;
         /* height: 15rem; */
     }
 }
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 5px;
+}
+
 .nav-links{
     color: #999794;
     font-size: 15px;
@@ -26,9 +39,11 @@ transition: all .2s linear;
     text-decoration: none;
     position: relative;
 }
+
 .nav-links:hover{
     color: #F08A00;
 }
+
 .nav-links:hover::after{
     content: '';
     height: .5rem;
@@ -37,10 +52,15 @@ transition: all .2s linear;
     top: 3.5rem; left: 0%;
     width: 100%;
 }
+
 .nav-sneaker {
     font-size: 30px;
     font-weight: 800;
+    font-style: none;
+    text-decoration: none;
+    color: #000;
 }
+
 .carro{
     height: 35px;
     width: 35px;
@@ -241,3 +261,4 @@ main{
 .articulos:hover{
     box-shadow: 0 12px 24px hsla(0, 0%, 10%, .5);
 }
+

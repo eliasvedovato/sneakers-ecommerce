@@ -1,4 +1,4 @@
-console.log("Hello World");
+// console.log("Hello World");
 
 // Estructura del producto
 // let productos = [
@@ -26,7 +26,7 @@ console.log("Hello World");
 let monedas = consultaCotizacion();
 
 function inicio(){
-    console.log(monedas);
+    // console.log(monedas);
 
     let productos = consultaProductoServidor();
 
