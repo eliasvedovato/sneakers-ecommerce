@@ -1,70 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sneakers.com</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik&display=swap" rel="stylesheet">
-    <script src="consulta.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik&display=swap" rel="stylesheet">
+        <title>Sneakers.com</title>
+        <script src="./consulta.js"></script>
 </head>
 <body onload="inicio()">
     <header>
         <nav class="nav-main">
 
-            <div class="logo">
-                <span class="nav-sneaker">sneakers</span>
-            </div>
-            <div class="links">
-                <a href="#" class="nav-links after">Collections</a>
-                <a href="#" class="nav-links">Men</a>
-                <a href="#" class="nav-links">Women</a>
-                <a href="#" class="nav-links">About</a>
-                <a href="#" class="nav-links">Contact</a>
-            </div>
-            <div class="carro-and-avatar">
-                <img class="carro" src="../images/icon-cart.svg">
-                <img class="avatar" src="../images/image-avatar.png">
-            </div>
+            <a href="./index2.html" class="nav-sneaker">Sneakers</a>
+            <a href="#" class="nav-links after">Collections</a>
+            <a href="#" class="nav-links">Men</a>
+            <a href="#" class="nav-links">Women</a>
+            <a href="./about-us.html" class="nav-links">About us</a>
+            <a href="#" class="nav-links">Contact</a>
+            <img class="carro" src="../src/images/icon-cart.svg">
+            <img class="avatar" src="../src/images/image-avatar.png">
 
         </nav>
     </header> 
-
+    
     <main>
-
+        
         <div class="lightboxes">
             
             <div class="lightbox" id="item-1">
                 <div class="lightbox__content">
                     <a href="#" class="close"></a>
-                    <img src="../images/image-product-1.jpg" width="700" height="700">
+                    <img src="../src/images/image-product-1.jpg" width="700" height="700">
                 </div>
             </div>
             <div class="lightbox" id="item-1">
                 <div class="lightbox__content">
                     <a href="#" class="close"></a>
-                    <img src="../images/image-product-1.jpg" alt="" width="700" height="700">
+                    <img src="../src/images/image-product-1.jpg" alt="" width="700" height="700">
                 </div>
             </div>
             <div class="lightbox" id="item-2">
                 <div class="lightbox__content">
                     <a href="#" class="close"></a>
-                    <img src="../images/image-product-2.jpg" alt="" width="700" height="700">
+                    <img src="../src/images/image-product-2.jpg" alt="" width="700" height="700">
                 </div>
             </div>
             <div class="lightbox" id="item-3">
                 <div class="lightbox__content">
                     <a href="#" class="close"></a>
-                    <img src="../images/image-product-3.jpg" alt="" width="700" height="700">
+                    <img src="../src/images/image-product-3.jpg" alt="" width="700" height="700">
                 </div>
             </div>
             <div class="lightbox" id="item-4">
                 <div class="lightbox__content">
                     <a href="#" class="close"></a>
-                    <img src="../images/image-product-4.jpg" alt="" width="700" height="700">
+                    <img src="../src/images/image-product-4.jpg" alt="" width="700" height="700">
                 </div>
             </div>
             
@@ -72,21 +67,21 @@
         
         <section class= "imgs">
             <a href="#item-1">
-                <img class="img" src="../images/image-product-1.jpg" width="450">
+                <img class="img" src="../src/images/image-product-1.jpg" width="450">
             </a>
             
             <div class="small-imgs">
                 <a href="#item-1">
-                    <img src="../images/image-product-1-thumbnail.jpg" width="80">
+                    <img src="../src/images/image-product-1-thumbnail.jpg" width="80">
                 </a>
                 <a href="#item-2">
-                    <img src="../images/image-product-2-thumbnail.jpg" width="80">
+                    <img src="../src/images/image-product-2-thumbnail.jpg" width="80">
                 </a>
                 <a href="#item-3">
-                    <img src="../images/image-product-3-thumbnail.jpg" width="80">
+                    <img src="../src/images/image-product-3-thumbnail.jpg" width="80">
                 </a>
                 <a href="#item-4">
-                    <img src="../images/image-product-4-thumbnail.jpg" width="80">
+                    <img src="../src/images/image-product-4-thumbnail.jpg" width="80">
                 </a>
             </div>
         </section>
@@ -107,12 +102,12 @@
             </div>
             <div class="price-2">
                 <div class="quantity">
-                    <span><img src="../images/icon-minus.svg" alt="minus" class="minus"></span>
+                    <span><img src="../src/images/icon-minus.svg" alt="minus" class="minus"></span>
                     <span class="numero"><strong>0</strong></span>
-                    <span><img src="../images/icon-plus.svg" alt="plus" class="plus"></span>
+                    <span><img src="../src/images/icon-plus.svg" alt="plus" class="plus"></span>
                 </div>
                 <div class="carrito-main">
-                    <img src="../images/icon-cart.svg" alt="carrito" class="carrito">
+                    <img src="../src/images/icon-cart.svg" alt="carrito" class="carrito">
                     <strong>Add to cart</strong>
                 </div>
             </div>
@@ -138,31 +133,31 @@
             </div>
             <h2>Nike Air Max 1</h2>
             <h4>Colorway: Black, White and Red</h3>
-            <h5>Precio: $250</h5>
-            <strong>Add to cart</strong>
-        </section>
-        <section class="articulo-3 articulos">
-            <div class="container-img">
-                <img src="../images/zapas-3.jpg" alt="" height="250px">
-            </div>
-            <h2>Nike Air Max 90 Summit</h2>
-            <h4>Colorway: White/Chile Red/Bleached Aqua</h4>
-            <h5>Precio: $370</h5>
-            <strong>Add to cart</strong>
-        </section>
-        <section class="articulo-4 articulos">
-            <div class="container-img">
-                <img src="../images/zapas-4.jpg" alt="" height="250px">
-            </div>
-            <h2>Nike Air Jordan 1</h2>
-            <h4>Colorway: Yellow Ochre</h4>
-            <h5>Precio: $350</h5>
-            <strong>Add to cart</strong>
-        </section>
-
-    </article> -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="./main.js"></script>
-</body>
-</html>
+                <h5>Precio: $250</h5>
+                <strong>Add to cart</strong>
+            </section>
+            <section class="articulo-3 articulos">
+                <div class="container-img">
+                    <img src="../images/zapas-3.jpg" alt="" height="250px">
+                </div>
+                <h2>Nike Air Max 90 Summit</h2>
+                <h4>Colorway: White/Chile Red/Bleached Aqua</h4>
+                <h5>Precio: $370</h5>
+                <strong>Add to cart</strong>
+            </section>
+            <section class="articulo-4 articulos">
+                <div class="container-img">
+                    <img src="../images/zapas-4.jpg" alt="" height="250px">
+                </div>
+                <h2>Nike Air Jordan 1</h2>
+                <h4>Colorway: Yellow Ochre</h4>
+                <h5>Precio: $350</h5>
+                <strong>Add to cart</strong>
+            </section>
+            
+        </article> -->
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="./main.js"></script>
+    </body>
+    </html>
