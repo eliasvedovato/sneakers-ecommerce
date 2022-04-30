@@ -53,7 +53,7 @@ function consultaProductoServidor() {
             stock: 30
         }
     ];
-    return productos; 
+    return productos;
 }
 
 function consultaCotizacion(){
@@ -62,8 +62,10 @@ function consultaCotizacion(){
     $.get('https://api.bluelytics.com.ar/v2/latest', (data) => {
         console.log(data);
         monedas = data;
-    })
+    });
+
     return monedas;
+    
     // fetch('https://api.bluelytics.com.ar/v2/latest')
     // .then( (resp) => resp.json () )
     // .then( (data) => {

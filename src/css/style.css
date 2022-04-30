@@ -19,7 +19,19 @@
 @media screen and (min-width: 830px) {
     .nav-main a{
         display: flex; flex-direction: column;
-        /* height: 15rem; */
+        height: 15rem;
+        transition: .4s;
+    }
+    .nav-main a{
+        font-size: 1.2rem;
+    }
+    .nav-links:hover::after{
+        content: '';
+        height: .9rem;
+        background-color: #F08A00;
+        position: absolute;
+        top: .5rem; left: 0%;
+        width: 100%;
     }
 }
 
