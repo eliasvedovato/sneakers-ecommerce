@@ -65,14 +65,6 @@ function consultaCotizacion(){
     });
 
     return monedas;
-    
-    // fetch('https://api.bluelytics.com.ar/v2/latest')
-    // .then( (resp) => resp.json () )
-    // .then( (data) => {
-    // console.log(data)
-    // monedas = data;
-    // })
-    // return monedas;
 }
 
 
