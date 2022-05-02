@@ -1,5 +1,3 @@
-// console.log("Hello World");
-
 // Estructura del producto
 // let productos = [
 //     {
@@ -24,11 +22,11 @@
 // 41150436
 
 let monedas = consultaCotizacion();
+let productos = consultaProductoServidor();
+let carrito = [];
 
 function inicio(){
     // console.log(monedas);
-
-    let productos = consultaProductoServidor();
 
     let tarjetasProductos = document.getElementById("tarjetasProductos");
 
@@ -39,15 +37,19 @@ function inicio(){
     }
 };
 
+// si esta implementado un sistema de stock
 function consultaStock(producto){
+
     let stockTotal = 0;
 
     if(typeof(producto.stock) === 'number'){
+        
     stockTotal = producto.stock;
     }
     return stockTotal;
 }
 
+// genera las tarjetas de los productos
 function tarjetaProducto(producto){
     let stock = consultaStock(producto);
     return `
@@ -64,4 +66,53 @@ function tarjetaProducto(producto){
     `   
 };
 
+// genera las tarjetas del carrito
+function tarjetaProductoCarrito(productoCarrito){
 
+    return `
+            <div class="articulos">
+                <div class="container-img">
+                    <img src='${productoCarrito.linkImg}'>
+                </div>
+                <h3>${productoCarrito.producto}</h3>
+                <small>${productoCarrito.colorway}</small>
+                <p>${productoCarrito.subTotal}</p>
+                <button onclick='quitarAlCarrito(${productoCarrito.id})'>Quitar del carrito</button>
+                <small>Disponibles: ${stock}</small>
+            </div>
+    `   
+};
+
+// agrega un producto al carrito o incrementa en 1 su cantidad
+function agregarAlCarrito(id){
+    let producto = buscaProdId(id);
+    console.log(producto);
+
+    let productoCarrito = {
+        producto: producto,
+        subTotal: 0,
+        cantdad: 0
+    }
+
+    carrito.push(productoCarrito);
+
+
+}
+
+// busca el producto por id
+function buscaProdId(id){
+    return productos.filter((e) => {
+        if(e.id === id){
+            return e;
+        }
+    })
+}
+
+// devulve el indice donde encontro el articulo
+function buscaProdCarritoId(id){
+    return productos.filter((e) => {
+        if(e.id === id){
+            return e;
+        }
+    })
+}
