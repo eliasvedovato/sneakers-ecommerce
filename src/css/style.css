@@ -279,3 +279,44 @@ main{
     box-shadow: 0 12px 24px hsla(0, 0%, 10%, .5);
 }
 
+/* MODAL */
+
+.sec-modal {
+    background-color: rgb(249, 184, 87);
+    position: relative;
+    height: 40em;
+    width: 40em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    bottom: 41em;
+    left: 112.5em;
+    border-radius: 5%;
+} 
+
+ .contenedor-modal{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    opacity: 1;
+    transition: opacity .6s;
+    position: absolute;
+}
+
+.modalOpen{
+    opacity: 1;
+    transition: opacity .6s;
+} 
+
+
+.modalClose{
+    text-decoration: none;
+    border-radius: 100%;
+    height: 30%;
+    width: 8%;
+}
+
+.modalClose:hover{
+    background-color: black;
+    color: white;
+}
