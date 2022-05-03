@@ -15,51 +15,91 @@
 <body onload="inicio()">
     <header>
         <nav class="nav-main">
-
+            
+            <!-- agregué una imagen de icono principal de la pagina y empecé a armar el carousel q saque de bootstrap -->
+            <img src="./images/icono-principal/icono1-mediano.png" alt="icono-zapas">
             <a href="./index2.html" class="nav-sneaker">Sneakers</a>
             <a href="#" class="nav-links after">Collections</a>
             <a href="#" class="nav-links">Men</a>
             <a href="#" class="nav-links">Women</a>
             <a href="./about-us.html" class="nav-links">About us</a>
             <a href="#" class="nav-links">Contact</a>
-            <img class="carro" src="../images/icon-cart.svg">
-            <img class="avatar" src="../images/image-avatar.png">
+            <img class="carro" src="./images/icon-cart.svg">
+            <img class="avatar" src="./images/image-avatar.png">
 
         </nav>
     </header> 
     
     <main>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="..." class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         
         <div class="lightboxes">
             
             <div class="lightbox" id="item-1">
                 <div class="lightbox__content">
                     <a href="#" class="close"></a>
-                    <img src="../images/image-product-1.jpg" width="700" height="700">
+                    <img src="./images/image-product-1.jpg" width="700" height="700">
                 </div>
             </div>
             <div class="lightbox" id="item-1">
                 <div class="lightbox__content">
                     <a href="#" class="close"></a>
-                    <img src="../images/image-product-1.jpg" alt="" width="700" height="700">
+                    <img src="./images/image-product-1.jpg" alt="" width="700" height="700">
                 </div>
             </div>
             <div class="lightbox" id="item-2">
                 <div class="lightbox__content">
                     <a href="#" class="close"></a>
-                    <img src="../images/image-product-2.jpg" alt="" width="700" height="700">
+                    <img src="./images/image-product-2.jpg" alt="" width="700" height="700">
                 </div>
             </div>
             <div class="lightbox" id="item-3">
                 <div class="lightbox__content">
                     <a href="#" class="close"></a>
-                    <img src="../images/image-product-3.jpg" alt="" width="700" height="700">
+                    <img src="./images/image-product-3.jpg" alt="" width="700" height="700">
                 </div>
             </div>
             <div class="lightbox" id="item-4">
                 <div class="lightbox__content">
                     <a href="#" class="close"></a>
-                    <img src="../images/image-product-4.jpg" alt="" width="700" height="700">
+                    <img src="./images/image-product-4.jpg" alt="" width="700" height="700">
                 </div>
             </div>
             
@@ -67,21 +107,21 @@
         
         <section class= "imgs">
             <a href="#item-1">
-                <img class="img" src="../images/image-product-1.jpg" width="450">
+                <img class="img" src="./images/image-product-1.jpg" width="450">
             </a>
             
             <div class="small-imgs">
                 <a href="#item-1">
-                    <img src="../images/image-product-1-thumbnail.jpg" width="80">
+                    <img src="./images/image-product-1-thumbnail.jpg" width="80">
                 </a>
                 <a href="#item-2">
-                    <img src="../images/image-product-2-thumbnail.jpg" width="80">
+                    <img src="./images/image-product-2-thumbnail.jpg" width="80">
                 </a>
                 <a href="#item-3">
-                    <img src="../images/image-product-3-thumbnail.jpg" width="80">
+                    <img src="./images/image-product-3-thumbnail.jpg" width="80">
                 </a>
                 <a href="#item-4">
-                    <img src="../images/image-product-4-thumbnail.jpg" width="80">
+                    <img src="./images/image-product-4-thumbnail.jpg" width="80">
                 </a>
             </div>
         </section>
@@ -102,12 +142,12 @@
             </div>
             <div class="price-2">
                 <div class="quantity">
-                    <span><img src="../images/icon-minus.svg" alt="minus" class="minus"></span>
+                    <span><img src="./images/icon-minus.svg" alt="minus" class="minus"></span>
                     <span class="numero"><strong>0</strong></span>
-                    <span><img src="../images/icon-plus.svg" alt="plus" class="plus"></span>
+                    <span><img src="./images/icon-plus.svg" alt="plus" class="plus"></span>
                 </div>
                 <div class="carrito-main">
-                    <img src="../images/icon-cart.svg" alt="carrito" class="carrito">
+                    <img src="./images/icon-cart.svg" alt="carrito" class="carrito">
                     <strong>Add to cart</strong>
                 </div>
             </div>
@@ -115,48 +155,6 @@
         
         <div id="tarjetasProductos" class="products-grid"></div>
     </main>
-    
-    <!-- <article class="products-grid">
-        
-        <section class="articulo-1 articulos">
-            <div class="container-img">
-                <img src="../images/zapas-1.jpg" alt="" height="250px">
-            </div>
-            <h2>Nike Air Force 1</h2>
-            <h4>Colorway: White</h4>
-            <h5>Precio: $300</h5>
-            <strong>Add to cart</strong>
-        </section>
-        <section class="articulo-2 articulos">
-            <div class="container-img">
-                <img src="../images/zapas-2.jpg" alt="" height="250px">
-            </div>
-            <h2>Nike Air Max 1</h2>
-            <h4>Colorway: Black, White and Red</h3>
-                <h5>Precio: $250</h5>
-                <strong>Add to cart</strong>
-            </section>
-            <section class="articulo-3 articulos">
-                <div class="container-img">
-                    <img src="../images/zapas-3.jpg" alt="" height="250px">
-                </div>
-                <h2>Nike Air Max 90 Summit</h2>
-                <h4>Colorway: White/Chile Red/Bleached Aqua</h4>
-                <h5>Precio: $370</h5>
-                <strong>Add to cart</strong>
-            </section>
-            <section class="articulo-4 articulos">
-                <div class="container-img">
-                    <img src="../images/zapas-4.jpg" alt="" height="250px">
-                </div>
-                <h2>Nike Air Jordan 1</h2>
-                <h4>Colorway: Yellow Ochre</h4>
-                <h5>Precio: $350</h5>
-                <strong>Add to cart</strong>
-            </section>
-            
-        </article> -->
-        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="./main.js"></script>
     </body>
