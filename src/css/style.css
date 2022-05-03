@@ -290,8 +290,10 @@ main{
     padding: 0;
     opacity: 0;
     bottom: 41em;
-    left: 112.5em;
+    left: 50%;
     border-radius: 5%;
+    box-sizing: border-box;
+    pointer-events: none;
 } 
 
  .contenedor-modal{
@@ -314,9 +316,16 @@ main{
     border-radius: 100%;
     height: 30%;
     width: 8%;
+    margin-top: 30em;
+    margin-left: 8em;
 }
 
 .modalClose:hover{
     background-color: black;
     color: white;
+}
+
+template{
+    height: 50%;
+    width: 50%;
 }
