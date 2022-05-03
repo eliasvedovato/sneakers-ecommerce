@@ -279,3 +279,29 @@ main{
     box-shadow: 0 12px 24px hsla(0, 0%, 10%, .5);
 }
 
+/* MODAL */
+
+.modal {
+    background-color: red;
+    position: relative;
+} 
+
+/* .modalConteiner{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    opacity: 1;
+    transition: opacity .6s;
+}
+
+.modalOpen{
+    opacity: 1;
+} */
+
+
+/* .modalClose{
+    text-decoration: none;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+} */
