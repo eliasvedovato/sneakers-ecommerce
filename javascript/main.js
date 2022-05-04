@@ -78,24 +78,31 @@ function tarjetaProductoCarrito(productoCarrito){
                 <small>${productoCarrito.colorway}</small>
                 <p>${productoCarrito.subTotal}</p>
                 <button onclick='quitarAlCarrito(${productoCarrito.id})'>Quitar del carrito</button>
-                <small>Disponibles: ${stock}</small>
+                <small>Cantidad a comprar: ${productoCarrito.cantidad}</small>
             </div>
     `   
 };
 
 // agrega un producto al carrito o incrementa en 1 su cantidad
 function agregarAlCarrito(id){
+
     let producto = buscaProdId(id);
-    console.log(producto);
+
+    // console.log(producto);
+
+    let indiceCarrito = carrito.map((e) => {return e.producto.id}).indexOf(id);
+
+    if (indiceCarrito > -1) {
+        carrito[indiceCarrito].subTotal += carrito[indiceCarrito].producto.precio;        
+    }
 
     let productoCarrito = {
         producto: producto,
         subTotal: 0,
-        cantdad: 0
+        cantidad: 0,
     }
 
     carrito.push(productoCarrito);
-
 
 }
 
