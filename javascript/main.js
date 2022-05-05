@@ -72,47 +72,91 @@ function tarjetaProductoCarrito(productoCarrito){
     return `
             <div class="articulos">
                 <div class="container-img">
-                    <img src='${productoCarrito.linkImg}'>
+                    <img src='${productoCarrito.producto.linkImg}'>
                 </div>
-                <h3>${productoCarrito.producto}</h3>
-                <small>${productoCarrito.colorway}</small>
+                <h3>${productoCarrito.producto.producto}</h3>
+                <small>${productoCarrito.producto.colorway}</small>
                 <p>${productoCarrito.subTotal}</p>
-                <button onclick='quitarAlCarrito(${productoCarrito.id})'>Quitar del carrito</button>
-                <small>Disponibles: ${stock}</small>
+                <button onclick='quitarAlCarrito(${productoCarrito.producto.id})'>Quitar del carrito</button>
+                <small>Cantidad a comprar: ${productoCarrito.cantidad}</small>
             </div>
     `   
 };
 
 // agrega un producto al carrito o incrementa en 1 su cantidad
 function agregarAlCarrito(id){
-    let producto = buscaProdId(id);
-    console.log(producto);
 
-    let productoCarrito = {
-        producto: producto,
-        subTotal: 0,
-        cantdad: 0
+    let producto = buscaProdId(id);
+
+    // console.log(producto);
+
+    let indiceCarrito = carrito.map((e) => {return e.producto.id}).indexOf(id);
+
+    if (indiceCarrito > -1) {            //EN CASO DE QUE ENCUENTRE EL PRODUCTO, INCREMENTA EL SUBTOTAL Y LA CANTIDAD.
+        carrito[indiceCarrito].subTotal += carrito[indiceCarrito].producto.precio;        
+        carrito[indiceCarrito].cantidad++;
+    } else {                            //EN CASO DE QUE NO LO ENCUENTRE, LO AGREGA DE 0.
+       
+        let productoCarrito = {
+            producto: producto,
+            subTotal: producto.precio,
+            cantidad: 1,
+        }
+
+        carrito.push(productoCarrito);
     }
 
-    carrito.push(productoCarrito);
-
-
+    
+    muestraCarrito(carrito);
 }
 
-// busca el producto por id
-function buscaProdId(id){
-    return productos.filter((e) => {
-        if(e.id === id){
-            return e;
-        }
-    })
+// Busca el producto por id
+
+//PARA PODER AGREGAR AL CARRITO MEDIANTE EL FILTRO,
+//HAY Q TENER EN CUENTA QUE LA FUNCION FILTER SIEMPRE DEVUELVE UN ARRAY, POR MAS QUE SEA DE UN UNICO ELEMENTO.
+//ENTONCES COMO SOLUCION, HAY QUE INDICAR SIEMPRE EL INDICE [0].
+
+function buscaProdId(id) {     
+    
+    // Hay dos formas de resolver el problema:
+
+    /*
+    Esta es una forma de expresarlo:
+    let conjuntoProductos = productos.filter((e) => {if (e.id === id) {return e}});
+
+    const producto = conjuntoProductos[0];
+
+    return producto;
+    */
+
+    //Y esta es la otra forma:
+    return productos.filter((e) => {if (e.id === id) {return e}})[0];
 }
 
-// devulve el indice donde encontro el articulo
-function buscaProdCarritoId(id){
-    return productos.filter((e) => {
+// devuelve el indice donde encontró el articulo
+function buscaProdCarritoId(id) {
+
+    return carrito.filter((e) => {
+
         if(e.id === id){
+
             return e;
         }
-    })
+    })[0];
+}
+
+
+//Muestra el carrito
+function muestraCarrito(productos) {
+
+    let divCarrito = document.getElementById("tarjetasCarrito");
+
+    divCarrito.innerHTML = "";
+
+    for (const producto of productos) {
+
+        divCarrito.innerHTML += tarjetaProductoCarrito(producto);
+
+    }
+
 }
