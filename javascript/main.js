@@ -60,7 +60,7 @@ function tarjetaProducto(producto){
                 <h3>${producto.producto}</h3>
                 <small>${producto.colorway}</small>
                 <p>${producto.precio}</p>
-                <button onclick='agregarAlCarrito(${producto.id})'>Agregar al carrito</button>
+                <button onclick='agregarAlCarrito(${producto.id}, 1)'>Agregar al carrito</button>
                 <small>Disponibles: ${stock}</small>
             </div>
     `   
@@ -76,15 +76,16 @@ function tarjetaProductoCarrito(productoCarrito){
                 </div>
                 <h3>${productoCarrito.producto.producto}</h3>
                 <small>${productoCarrito.producto.colorway}</small>
-                <p>${productoCarrito.subTotal}</p>
-                <button onclick='quitarAlCarrito(${productoCarrito.producto.id})'>Quitar del carrito</button>
+                <h4>${productoCarrito.producto.precio}</h4>
+                <p>Subtotal: ${productoCarrito.subTotal}</p>
+                <button onclick='quitarAlCarrito(${productoCarrito.producto.id}, 1)'>Quitar del carrito</button>
                 <small>Cantidad a comprar: ${productoCarrito.cantidad}</small>
             </div>
     `   
 };
 
 // agrega un producto al carrito o incrementa en 1 su cantidad
-function agregarAlCarrito(id){
+function agregarAlCarrito(id, cantidadAAumentar){
 
     let producto = buscaProdId(id);
 
@@ -93,8 +94,15 @@ function agregarAlCarrito(id){
     let indiceCarrito = carrito.map((e) => {return e.producto.id}).indexOf(id);
 
     if (indiceCarrito > -1) {            //EN CASO DE QUE ENCUENTRE EL PRODUCTO, INCREMENTA EL SUBTOTAL Y LA CANTIDAD.
-        carrito[indiceCarrito].subTotal += carrito[indiceCarrito].producto.precio;        
-        carrito[indiceCarrito].cantidad++;
+
+        if ((carrito[indiceCarrito].cantidad + cantidadAAumentar) <= consultaStock(carrito[indiceCarrito].producto)) {
+            
+            carrito[indiceCarrito].subTotal += (carrito[indiceCarrito].producto.precio * cantidadAAumentar),        
+            carrito[indiceCarrito].cantidad += cantidadAAumentar;
+        } else {
+            alert("No se pueden agregar mas artículos de los existentes");
+        }
+
     } else {                            //EN CASO DE QUE NO LO ENCUENTRE, LO AGREGA DE 0.
        
         let productoCarrito = {
