@@ -17,7 +17,7 @@
 }
 
 body::-webkit-scrollbar {
-    width: 7px;
+    width: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
