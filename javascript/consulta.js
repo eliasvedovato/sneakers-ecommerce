@@ -8,7 +8,7 @@ function consultaProductoServidor() {
             linkImg: './images/zapas-1.jpg',
             moneda:{
                 id: 1,
-                moneda: 'dolares',
+                moneda: 'dolar',
                 simbolo: '$'
             },
             stock: 15,
@@ -21,7 +21,7 @@ function consultaProductoServidor() {
             linkImg: './images/zapas-2.jpg',
             moneda: {
                 id: 2,
-                moneda: 'dolares',
+                moneda: 'dolar',
                 simbolo: '$'
             },
             stock: 20,
@@ -34,7 +34,7 @@ function consultaProductoServidor() {
             linkImg: './images/zapas-3.jpg',
             moneda: {
                 id: 3,
-                moneda: 'dolares',
+                moneda: 'dolar',
                 simbolo: '$'
             },
             stock: 20,
@@ -47,7 +47,7 @@ function consultaProductoServidor() {
             linkImg: './images/zapas-4.jpg',
             moneda: {
                 id: 4,
-                moneda: 'dolares',
+                moneda: 'dolar',
                 simbolo: '$'
             },
             stock: 30,
@@ -57,14 +57,9 @@ function consultaProductoServidor() {
 }
 
 function consultaCotizacion(){
-    let monedas = {};
-
-    $.get('https://api.bluelytics.com.ar/v2/latest', (data) => {
-        console.log(data);
+    $.get("https://api.bluelytics.com.ar/v2/latest", (data) => {
         monedas = data;
     });
-
-    return monedas;
-}
+};
 
 

@@ -21,23 +21,37 @@
 // tomas_zab@outlook.com
 // 41150436
 
-let monedas = consultaCotizacion();
+consultaCotizacion();
+let monedas = {};
 let productos = consultaProductoServidor();
 let carrito = [];
 
+var intervalo;
+
+//Funcion inicial
 function inicio(){
-    // console.log(monedas);
+    console.log(monedas);
 
     let tarjetasProductos = document.getElementById("tarjetasProductos");
 
     tarjetasProductos.innerHTML = "";
 
-    for (const producto of productos) {
-        tarjetasProductos.innerHTML += tarjetaProducto(producto);
-    }
-};
+    intervalo = setInterval(function () {
+        if (!monedas.hasOwnProperty("last_update")) {
+            console.log("No llegaron las monedas");
+        } else {
+            clearInterval(intervalo);
+            if (productos) {
+            
+                for (const producto of productos) {
+                    tarjetasProductos.innerHTML += tarjetaProducto(producto);
+                }
+            }
+        }
+    }, 100);
+}
 
-// si esta implementado un sistema de stock
+//Esta funcion toma en cuenta la modularidad del sistema (si está implementado un sistema de stock)
 function consultaStock(producto){
 
     let stockTotal = 0;
@@ -100,7 +114,8 @@ function agregarAlCarrito(id, cantidadAAumentar){
             carrito[indiceCarrito].subTotal += (carrito[indiceCarrito].producto.precio * cantidadAAumentar),        
             carrito[indiceCarrito].cantidad += cantidadAAumentar;
         } else {
-            alert("No se pueden agregar mas artículos de los existentes");
+            // alert("No se pueden agregar más artículos de los existentes");
+            mostrarToast("No se pueden agregar más artículos de los existentes", 3000);
         }
 
     } else {                            //EN CASO DE QUE NO LO ENCUENTRE, LO AGREGA DE 0.
@@ -139,8 +154,9 @@ function quitarDelCarrito(id, cantidadADisminuir){
             carrito.splice(indiceCarrito, 1);
         }
 
-    } else {                            
-       alert("El item no se encuentra en el carrito");
+    } else {             
+        //alert("El item no se encuentra en el carrito");
+        mostrarToast("El item no se encuentra en el carrito", 3000);            
     }
 
     
@@ -201,3 +217,20 @@ function muestraCarrito(productos) {
         divCarrito.innerHTML = "No hay artículos en el carrito.";
     }
 }
+
+var limpiaToast;
+
+function mostrarToast(mensaje, tiempo) {
+
+    var divToast = document.getElementById("toast");
+    divToast.innerHTML = mensaje;
+    divToast.classList.add("show");
+    limpiaToast = setTimeout(clearToast, tiempo);
+}
+
+function clearToast() {
+    var divToast = document.getElementById("toast");
+    
+    clearTimeout(limpiaToast);
+    divToast.classList.remove("show"); 
+}   
