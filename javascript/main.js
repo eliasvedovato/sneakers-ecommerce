@@ -78,13 +78,13 @@ function tarjetaProductoCarrito(productoCarrito){
                 <small>${productoCarrito.producto.colorway}</small>
                 <h4>${productoCarrito.producto.precio}</h4>
                 <p>Subtotal: ${productoCarrito.subTotal}</p>
-                <button onclick='quitarAlCarrito(${productoCarrito.producto.id}, 1)'>Quitar del carrito</button>
+                <button onclick='quitarDelCarrito(${productoCarrito.producto.id}, 1)'>Quitar del carrito</button>
                 <small>Cantidad a comprar: ${productoCarrito.cantidad}</small>
             </div>
     `   
 };
 
-// agrega un producto al carrito o incrementa en 1 su cantidad
+// agrega un producto al carrito o incrementa en cantidadAAumentar su cantidad
 function agregarAlCarrito(id, cantidadAAumentar){
 
     let producto = buscaProdId(id);
@@ -105,6 +105,8 @@ function agregarAlCarrito(id, cantidadAAumentar){
 
     } else {                            //EN CASO DE QUE NO LO ENCUENTRE, LO AGREGA DE 0.
        
+        //Hay que ver si la cantidad supera a la disponible (tengo que usar para cantidad la variable cantidadAAumentar)
+
         let productoCarrito = {
             producto: producto,
             subTotal: producto.precio,
@@ -112,6 +114,33 @@ function agregarAlCarrito(id, cantidadAAumentar){
         }
 
         carrito.push(productoCarrito);
+    }
+
+    
+    muestraCarrito(carrito);
+}
+
+// quita un producto al carrito o disminuye en cantidadADisminuir su cantidad
+function quitarDelCarrito(id, cantidadADisminuir){
+
+    let producto = buscaProdId(id);
+
+    // console.log(producto);
+
+    let indiceCarrito = carrito.map((e) => {return e.producto.id}).indexOf(id);
+
+    if (indiceCarrito > -1) {            
+
+        if ((carrito[indiceCarrito].cantidad - cantidadADisminuir) > 0) {
+            
+            carrito[indiceCarrito].subTotal -= (carrito[indiceCarrito].producto.precio * cantidadADisminuir),        
+            carrito[indiceCarrito].cantidad -= cantidadADisminuir;
+        } else {
+            carrito.splice(indiceCarrito, 1);
+        }
+
+    } else {                            
+       alert("El item no se encuentra en el carrito");
     }
 
     
@@ -161,10 +190,14 @@ function muestraCarrito(productos) {
 
     divCarrito.innerHTML = "";
 
-    for (const producto of productos) {
+    if (productos.length > 0) {
 
-        divCarrito.innerHTML += tarjetaProductoCarrito(producto);
+        for (const producto of productos) {
 
+            divCarrito.innerHTML += tarjetaProductoCarrito(producto);
+    
+        }    
+    } else {
+        divCarrito.innerHTML = "No hay artículos en el carrito.";
     }
-
 }
