@@ -8,7 +8,7 @@
     padding: 0;
 }
 
-.nav-main {
+.nav-main{
     height: 100px;
     width: 100%;
     border-bottom: 0.5px solid rgb(224, 211, 211);
@@ -17,7 +17,7 @@
 }
 
 body::-webkit-scrollbar {
-    width: 7px;
+    width: 9px;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -90,6 +90,9 @@ body::-webkit-scrollbar-thumb {
     .nav-main .avatar{
         position: absolute; right: 2em; top: 1.8em;
     }
+    .cart-section{
+        min-width: 85%;
+    }
 }
 
 img{
@@ -153,12 +156,12 @@ main{
 
 .carrito-main {
     background-color: #F08A00;
-    padding: 10px 20px 10px 30px;
-    margin-left: 15px;
+    padding: 10px 25px;
+    /* margin-left: 15px; */
     border-radius: 4px;
     font-size: 10px;
     color: #fff;
-    width: 8.5rem;
+    width: 8rem;
 }
 
 .carrito-main:hover{
@@ -167,26 +170,27 @@ main{
 }
 
 .carrito {
-    height: 10px;
+    height: 12px;
     margin-right: 5px;
 }
 
 .price-2 {
-    margin: 10px;
-    margin-top: 30px;
+    margin: 30px 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .quantity {
-    background-color: rgb(237, 243, 240);
+    background-color: rgb(206, 212, 209);
     border-radius: 4px;
-    padding: 8px 25px;
-    width: 8.5rem;
+    padding: 8px 15px;
+    width: 5.5rem;
+    display: flex; flex-direction: row;
+    justify-content: space-between; align-items: center;
 }
 
 .numero{
-    font-size: 11px;
+    font-size: 13px;
 }
 
 .minus {
@@ -201,11 +205,13 @@ main{
     height: 8px;
     cursor: pointer;
 }
+
 .lightbox{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw; height: 100vh;
+    width: 100vw; 
+    height: 100vh;
     background: rgba(0, 0, 0, .4);
     display: flex; justify-content: center;
     align-items: center;
@@ -226,7 +232,7 @@ main{
     position: absolute;
     width: 2em; height: 2em;
     background: red;
-    top: -1em; right: -1em;
+    top: 2em; right: 2em;
     border-radius: 50%;
     display: flex; justify-content: center;
     align-items: center;
@@ -279,44 +285,45 @@ main{
     box-shadow: 0 12px 24px hsla(0, 0%, 10%, .5);
 }
 
-/* MODAL */
+/* CART */
 
-.sec-modal {
-    background-color: rgb(249, 184, 87);
-    position: relative;
-    height: 40em;
-    width: 40em;
-    margin: 0;
+.cart-section {
+    height: 85%;
+    width: 30%;
+    position: fixed;
+    right: -300%; top: 0;
     padding: 0;
-    opacity: 0;
-    bottom: 41em;
-    left: 112.5em;
-    border-radius: 5%;
-} 
+    background: rgba(254, 250, 247, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border: 1px solid rgba(255, 255, 255, 0.27);
+    transition: .7s ease;
+}
 
- .contenedor-modal{
+.open-cart{
+    margin: 2em;
+    top: 0; 
+    right: 0;
+}
+
+.contenedor-cart{
+    height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 20px;
-    opacity: 1;
-    transition: opacity .6s;
-    position: absolute;
 }
 
-.modalOpen{
-    opacity: 1;
-    transition: opacity .6s;
-} 
-
-
-.modalClose{
+.close-cart{
     text-decoration: none;
-    border-radius: 100%;
-    height: 30%;
-    width: 8%;
+    border-radius: 20%;
+    height: 2em;
+    width: 4em;
 }
 
-.modalClose:hover{
+.closeCart:hover{
     background-color: black;
     color: white;
 }

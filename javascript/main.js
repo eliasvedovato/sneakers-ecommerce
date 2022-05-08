@@ -60,10 +60,21 @@ function tarjetaProducto(producto){
                 <h3>${producto.producto}</h3>
                 <small>${producto.colorway}</small>
                 <p>${producto.precio}</p>
-                <button onclick='agregarAlCarrito(${producto.id})'>Agregar al carrito</button>
-                <small>Disponibles: ${stock}</small>
+                <small>Disponibles: ${stock}</small><br>
+                <div class="price-2">
+                    <div class="quantity">
+                        <span><img src="./images/icon-minus.svg" alt="minus" class="minus"></span>
+                        <span class="numero"><strong>1</strong></span>
+                        <span><img src="./images/icon-plus.svg" alt="plus" class="plus"></span>
+                    </div>
+                    <div class="carrito-main">
+                        <img src="./images/icon-cart.svg" alt="carrito" class="carrito">
+                        <strong onclick='agregarAlCarrito(${producto.id})'>Add to cart</strong>
+                    </div>
+                </div>
+
             </div>
-    `   
+    `;   
 };
 
 // genera las tarjetas del carrito
@@ -77,8 +88,19 @@ function tarjetaProductoCarrito(productoCarrito){
                 <h3>${productoCarrito.producto}</h3>
                 <small>${productoCarrito.colorway}</small>
                 <p>${productoCarrito.subTotal}</p>
-                <button onclick='quitarAlCarrito(${productoCarrito.id})'>Quitar del carrito</button>
                 <small>Disponibles: ${stock}</small>
+                <div class="price-2">
+                    <div class="quantity">
+                        <span><img src="./images/icon-minus.svg" alt="minus" class="minus"></span>
+                        <span class="numero"><strong>1</strong></span>
+                        <span><img src="./images/icon-plus.svg" alt="plus" class="plus"></span>
+                    </div>
+                    <div class="carrito-main">
+                        <img src="./images/icon-cart.svg" alt="carrito" class="carrito">
+                        <strong onclick='quitarAlCarrito(${productoCarrito.id})'>Quitar del carrito</strong>
+                    </div>
+                </div>
+                <button>Quitar del carrito</button>
             </div>
     `   
 };
@@ -91,7 +113,7 @@ function agregarAlCarrito(id){
     let productoCarrito = {
         producto: producto,
         subTotal: 0,
-        cantdad: 0
+        cantidad: 0
     }
 
     carrito.push(productoCarrito);
