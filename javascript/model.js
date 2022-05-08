@@ -19,8 +19,9 @@ closeCart.addEventListener("click", (e) =>{
 /** ubicamos el contenedor de los lightbox */
 const lightboxes = document.querySelector('.lightbox:target')
 
-    if(!lightboxes){
-        document.addEventListener('click', () =>{
+    if(lightboxes){
+        lightboxes.addEventListener('mousedown', (e) =>{
+            e.preventDefault
             lightboxes.classList.remove('.lightbox:target')
         })
     }
