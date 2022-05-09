@@ -17,7 +17,7 @@
 }
 
 body::-webkit-scrollbar {
-    width: 9px;
+    width: 8px;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -306,6 +306,30 @@ main{
     box-shadow: 0 12px 24px hsla(0, 0%, 10%, .5);
 }
 
+/* TOAST */
+
+#toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 30px;
+    font-size: 17px;
+}
+  
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
 /* CART */
 
 .cart-section {
@@ -348,4 +372,9 @@ main{
 .closeCart:hover{
     background-color: black;
     color: white;
+}
+
+template{
+    height: 50%;
+    width: 50%;
 }
