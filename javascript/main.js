@@ -77,7 +77,7 @@ function tarjetaProducto(producto){
                 <button onclick='agregarAlCarrito(${producto.id}, 1)'>Agregar al carrito</button>
                 <small>Disponibles: ${stock}</small>
             </div>
-    `;   
+    `   
 };
 
 // genera las tarjetas del carrito
