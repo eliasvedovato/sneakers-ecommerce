@@ -1,0 +1,19 @@
+.switch {
+    background: #343D5B;
+    border-radius: 100%;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+
+    /*para sacarle los estilos que el navegador le agrega por defecto */
+    span {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        background: none;
+        color: #fff;
+    }
+}
