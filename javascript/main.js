@@ -101,7 +101,7 @@ function tarjetaProductoCarrito(productoCarrito){
                 <h3>${productoCarrito.producto}</h3>
                 <small>${productoCarrito.colorway}</small>
                 <p>${productoCarrito.subTotal}</p>
-                <small>Disponibles: ${stock}</small>
+                <small>Disponibles: ${productoCarrito.stock}</small>
                 <div class="price-2">
                     <div class="quantity">
                         <span><img src="./images/icon-minus.svg" alt="minus" class="minus"></span>
@@ -113,7 +113,6 @@ function tarjetaProductoCarrito(productoCarrito){
                         <strong onclick='quitarDelCarrito(${productoCarrito.id})'>Quitar del carrito</strong>
                     </div>
                 </div>
-                <button>Quitar del carrito</button>
             </div>
     `   
 };
