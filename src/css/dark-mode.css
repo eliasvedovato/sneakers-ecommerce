@@ -1,0 +1,22 @@
+.switch {
+  background: #343D5B;
+  border-radius: 100%;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  /*para sacarle los estilos que el navegador le agrega por defecto */
+}
+
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+}
+/*# sourceMappingURL=dark-mode.css.map */
