@@ -1,0 +1,73 @@
+.switch {
+  background: #343d5b;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+}
+
+.switch .fa-solid {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+}
+
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.switch.active {
+  background: orange;
+  color: #000;
+}
+
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #F1F1F1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  -webkit-box-shadow: 0px 0px 2px 2px black;
+          box-shadow: 0px 0px 2px 2px black;
+}
+
+body {
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
+}
+
+body.dark {
+  background: #1f1e1e;
+}
+
+body.dark a, body.dark h1, body.dark h3, body.dark span, body.dark small, body.dark p {
+  color: #fff;
+}
+
+body.dark .price strong {
+  color: #5b3456;
+}
+/*# sourceMappingURL=estilos.css.map */
