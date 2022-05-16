@@ -55,19 +55,42 @@
 body {
   -webkit-transition: .3s ease all;
   transition: .3s ease all;
-  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
-          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+          box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
 }
 
 body.dark {
   background: #1f1e1e;
 }
 
-body.dark a, body.dark h1, body.dark h3, body.dark span, body.dark small, body.dark p {
+body.dark a,
+body.dark h1,
+body.dark h3,
+body.dark span,
+body.dark small,
+body.dark p {
   color: #fff;
 }
 
-body.dark .price strong {
-  color: #5b3456;
+body.dark .info:hover {
+  -webkit-box-shadow: 0 12px 24px rgba(139, 137, 137, 0.2);
+          box-shadow: 0 12px 24px rgba(139, 137, 137, 0.2);
+}
+
+body.dark .articulos:hover {
+  -webkit-box-shadow: 0 12px 24px rgba(139, 137, 137, 0.2);
+          box-shadow: 0 12px 24px rgba(139, 137, 137, 0.2);
+}
+
+body.dark .discount {
+  color: #5f5d5d;
+}
+
+body.dark .numero {
+  color: #000;
+}
+
+body.dark .cart {
+  color: #000;
 }
 /*# sourceMappingURL=estilos.css.map */

@@ -156,7 +156,7 @@ main{
 
 .carrito-main {
     background-color: #F08A00;
-    padding: 10px 25px;
+    padding: 15px 25px;
     border-radius: 4px;
     font-size: 10px;
     color: #fff;
@@ -169,7 +169,8 @@ main{
 }
 
 .carrito {
-    height: 12px;
+    height: 17px;
+    padding-bottom: 2px;
     margin-right: 5px;
 }
 
