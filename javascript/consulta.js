@@ -56,7 +56,7 @@ function consultaProductoServidor() {
             id: 5,
             producto: 'Nike Air Jordan 1',
             colorway: 'Yellow-Ochre',
-            precio: '$377',
+            precio: 377,
             linkImg: './images/zapas-5.jpg',
             moneda: {
                 id: 5,
@@ -69,7 +69,7 @@ function consultaProductoServidor() {
             id: 6,
             producto: 'Nike Air Jordan Night',
             colorway: 'Deep-Black',
-            precio: '$210',
+            precio: 210,
             linkImg: './images/zapas-6.jpg',
             moneda: {
                 id: 6,
@@ -82,7 +82,7 @@ function consultaProductoServidor() {
             id: 7,
             producto: 'Nike Air 003',
             colorway: 'Deep-Black/Red',
-            precio: '$550',
+            precio: 550,
             linkImg: './images/zapas-7.jpg',
             moneda: {
                 id: 7,
@@ -95,7 +95,7 @@ function consultaProductoServidor() {
             id: 8,
             producto: 'New Balance 033',
             colorway: 'Black/Blue/Red',
-            precio: '$430',
+            precio: 430,
             linkImg: './images/zapas-8.jpg',
             moneda: {
                 id: 8,
