@@ -1,4 +1,4 @@
-.switch{
+.switch {
     background: #343d5b;
     border-radius: 1000px;
     border: none;
@@ -16,21 +16,22 @@
         color: #fff;
     }
 
-    span{
+    span {
         width: 30px;
         height: 30px;
         line-height: 30px;
     }
 
-    &.active{
+    &.active {
         background: orange;
         color: #000;
-        &::after{
+
+        &::after {
             right: 0;
             left: unset;
         }
     }
-    
+
 }
 
 .switch::after {
@@ -48,22 +49,44 @@
     box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 2);
 }
 
-body{
+body {
     transition: .3s ease all;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, .9);
-    &.dark{
+    box-shadow: 10px 10px 20px rgba(170, 170, 170, .16);
+
+    &.dark {
         background: rgb(31, 30, 30);
 
-        a, h1, h3, span, small, p{
+        a,
+        h1,
+        h3,
+        span,
+        small,
+        p {
             color: #fff;
-        };
+        }
 
-        .price{
-    
-            strong{
-                color: #5b3456;
-            };
+        .info {
+            &:hover {
+                box-shadow: 0 12px 24px rgba(139, 137, 137, 0.2);
+            }
+        }
+
+        .articulos {
+            &:hover {
+                box-shadow: 0 12px 24px rgba(139, 137, 137, 0.2);
+            }
+        }
+
+        .discount {
+            color: rgb(95, 93, 93);
+        }
+
+        .numero {
+            color: #000;
         }
         
+        .cart {
+            color: #000;            
+        }
     }
 }
