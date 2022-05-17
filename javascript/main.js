@@ -1,22 +1,6 @@
-// Estructura del producto
-// let productos = [
-//     {
-//         id: 1,
-//         producto: '',
-//         colorway: '',
-//         precio: '',
-//         linkImg: '',
-//         moneda:{
-//             id: 1,
-//             moneda: '',
-//             simbolo: ''
-//         },
-//         stock: ''
-//     }
-// ]
-
 // https://api.bluelytics.com.ar/v2/latest
 // api de conversiòn de divisas
+
 // Alumni:
 // tomas_zab@outlook.com
 // 41150436
@@ -30,7 +14,6 @@ var intervalo;
 
 //Funcion inicial
 function inicio(){
-    console.log(monedas);
 
     let tarjetasProductos = document.getElementById("tarjetasProductos");
 
@@ -57,7 +40,6 @@ function consultaStock(producto){
     let stockTotal = 0;
 
     if(typeof(producto.stock) === 'number'){
-        
     stockTotal = producto.stock;
     }
     return stockTotal;
@@ -73,7 +55,7 @@ function tarjetaProducto(producto){
                 </div>
                 <h3>${producto.producto}</h3>
                 <small>${producto.colorway}</small>
-                <p>${producto.precio}</p>
+                <p>$${producto.precio}</p>
                 <small>Disponibles: ${stock}</small><br>
                 <div class="price-2">
                     <div class="quantity">
@@ -82,7 +64,6 @@ function tarjetaProducto(producto){
                         <span><img src="./images/icon-plus.svg" alt="plus" class="plus"></span>
                     </div>
                     <div class="carrito-main">
-                        <img src="./images/icon-cart.svg" alt="carrito" class="carrito">
                         <strong onclick='agregarAlCarrito(${producto.id})'>Add to cart</strong>
                     </div>
                 </div>
@@ -98,10 +79,10 @@ function tarjetaProductoCarrito(productoCarrito){
                 <div class="container-img">
                     <img src='${productoCarrito.producto.linkImg}'>
                 </div>
-                <h3>${productoCarrito.producto}</h3>
-                <small>${productoCarrito.colorway}</small>
-                <p>${productoCarrito.subTotal}</p>
-                <small>Disponibles: ${productoCarrito.stock}</small>
+                <h3>${productoCarrito.producto.producto}</h3>
+                <small>${productoCarrito.producto.colorway}</small>
+                <p>$${productoCarrito.subTotal}</p>
+                <small>Disponibles: ${productoCarrito.producto.stock}</small>
                 <div class="price-2">
                     <div class="quantity">
                         <span><img src="./images/icon-minus.svg" alt="minus" class="minus"></span>
@@ -109,8 +90,7 @@ function tarjetaProductoCarrito(productoCarrito){
                         <span><img src="./images/icon-plus.svg" alt="plus" class="plus"></span>
                     </div>
                     <div class="carrito-main">
-                        <img src="./images/icon-cart.svg" alt="carrito" class="carrito">
-                        <strong onclick='quitarDelCarrito(${productoCarrito.id})'>Quitar del carrito</strong>
+                        <strong onclick='quitarDelCarrito(${productoCarrito.producto.id})'>Eliminar</strong>
                     </div>
                 </div>
             </div>
@@ -124,7 +104,7 @@ function agregarAlCarrito(id, cantidadAAumentar){
 
     let indiceCarrito = carrito.map((e) => {return e.producto.id}).indexOf(id);
 
-    if (indiceCarrito > -1) {            //EN CASO DE QUE ENCUENTRE EL PRODUCTO, INCREMENTA EL SUBTOTAL Y LA CANTIDAD.
+    if (indiceCarrito > -1) { //EN CASO DE QUE ENCUENTRE EL PRODUCTO, INCREMENTA EL SUBTOTAL Y LA CANTIDAD.
 
         if ((carrito[indiceCarrito].cantidad + cantidadAAumentar) <= consultaStock(carrito[indiceCarrito].producto)) {
             
@@ -161,7 +141,7 @@ function quitarDelCarrito(id, cantidadADisminuir){
 
     let indiceCarrito = carrito.map((e) => {return e.producto.id}).indexOf(id);
 
-    if (indiceCarrito > -1) {            
+    if (indiceCarrito > -1) {       
 
         if ((carrito[indiceCarrito].cantidad - cantidadADisminuir) > 0) {
             
@@ -176,7 +156,6 @@ function quitarDelCarrito(id, cantidadADisminuir){
         mostrarToast("El item no se encuentra en el carrito", 3000);            
     }
 
-    
     muestraCarrito(carrito);
 }
 
@@ -214,7 +193,6 @@ function buscaProdCarritoId(id) {
         }
     })[0];
 }
-
 
 //Muestra el carrito
 function muestraCarrito(productos) {
