@@ -50,7 +50,7 @@ function consultaProductoServidor() {
                 moneda: 'dolar',
                 simbolo: '$'
             },
-            stock: 30
+            stock: 30,
         },
         {
             id: 5,
@@ -60,10 +60,10 @@ function consultaProductoServidor() {
             linkImg: './images/zapas-5.jpg',
             moneda: {
                 id: 5,
-                moneda: 'dolares',
+                moneda: 'dolar',
                 simbolo: '$'
             },
-            stock: 22
+            stock: 22,
         },
         {
             id: 6,
@@ -73,10 +73,10 @@ function consultaProductoServidor() {
             linkImg: './images/zapas-6.jpg',
             moneda: {
                 id: 6,
-                moneda: 'dolares',
+                moneda: 'dolar',
                 simbolo: '$'
             },
-            stock: 12
+            stock: 12,
         },
         {
             id: 7,
@@ -86,10 +86,10 @@ function consultaProductoServidor() {
             linkImg: './images/zapas-7.jpg',
             moneda: {
                 id: 7,
-                moneda: 'dolares',
+                moneda: 'dolar',
                 simbolo: '$'
             },
-            stock: 14
+            stock: 14,
         },
         {
             id: 8,
@@ -99,10 +99,10 @@ function consultaProductoServidor() {
             linkImg: './images/zapas-8.jpg',
             moneda: {
                 id: 8,
-                moneda: 'dolares',
+                moneda: 'dolar',
                 simbolo: '$'
             },
-            stock: 10
+            stock: 10,
         }
     ];
     return productos;
