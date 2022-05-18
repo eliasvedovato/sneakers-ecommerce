@@ -15,20 +15,3 @@ closeCart.addEventListener("click", (e) =>{
     e.preventDefault
     cart.classList.remove("open-cart")
 })
-
-/** ubicamos el contenedor de los lightbox */
-const lightboxes = document.querySelector('.lightbox:target')
-
-    if(lightboxes){
-        lightboxes.addEventListener('mousedown', (e) =>{
-            e.preventDefault
-            lightboxes.classList.remove('.lightbox:target')
-        })
-    }
-// lightboxes.addEventListener('')
-
-
-
-/** ubicamos el avatar, el contenedor del login */
-const user = document.querySelector('.avatar'),
-    login = document.querySelector('.contenedor-login')
