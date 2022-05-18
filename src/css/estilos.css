@@ -55,8 +55,8 @@
 body {
   -webkit-transition: .3s ease all;
   transition: .3s ease all;
-  -webkit-box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
-          box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+  -webkit-box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.568);
+          box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.568);
 }
 
 body.dark {
@@ -72,9 +72,17 @@ body.dark p {
   color: #fff;
 }
 
+body.dark .info {
+  border: 1px solid rgba(126, 124, 124, 0.562);
+}
+
 body.dark .info:hover {
   -webkit-box-shadow: 0 12px 24px rgba(139, 137, 137, 0.2);
           box-shadow: 0 12px 24px rgba(139, 137, 137, 0.2);
+}
+
+body.dark .articulos {
+  border: 1px solid rgba(126, 124, 124, 0.562);
 }
 
 body.dark .articulos:hover {

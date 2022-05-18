@@ -101,6 +101,16 @@ img{
     max-width: 100%;
 }
 
+.carousel-slide {
+    width: 1920px;
+    height: 1080px;
+}
+
+.img-carousel {
+    width: 1920px;
+    height: 720px;
+}
+
 main{
     padding: 50px 1%;
     width: 100%;
@@ -121,6 +131,7 @@ main{
 .info{
     padding: 50px;
     margin: 25px 50px 50px 50px;
+    border: 1px solid rgba(243, 167, 123, 0.425);
 }
 .info:hover{
     box-shadow: 0 12px 24px hsla(0, 0%, 10%, .2);
@@ -279,9 +290,11 @@ main{
     display: flex;
     justify-content: center;
 }
+
 .container-img > img{
     object-fit: cover;
 }
+
 .articulos > strong{
     background-color: #F08A00;
     border-radius: 3px;
@@ -293,16 +306,19 @@ main{
     text-align: center;
     justify-content: center;
 }
+
 .articulos > strong:hover{
     background-color: #fab048;
 }
+
 .articulos{
     overflow: hidden;
     border-radius: .3rem;
     padding: 0.5rem;
     width: 100%;
-
+    border: 1px solid rgba(243, 167, 123, 0.425);
 }
+
 .articulos:hover{
     box-shadow: 0 12px 24px hsla(0, 0%, 10%, .5);
 }
