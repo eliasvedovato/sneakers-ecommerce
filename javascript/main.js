@@ -12,7 +12,7 @@ let carrito = [];
 
 var intervalo;
 
-//Funcion inicial
+// Función inicial
 function inicio(){
 
     let tarjetasProductos = document.getElementById("tarjetasProductos");
@@ -34,7 +34,7 @@ function inicio(){
     }, 100);
 }
 
-//Esta funcion toma en cuenta la modularidad del sistema (si está implementado un sistema de stock)
+// Esta función toma en cuenta la modularidad del sistema (si está implementado un sistema de stock)
 function consultaStock(producto){
 
     let stockTotal = 0;
@@ -45,7 +45,7 @@ function consultaStock(producto){
     return stockTotal;
 }
 
-// genera las tarjetas de los productos
+// Genera las tarjetas de los productos
 function tarjetaProducto(producto){
     let stock = consultaStock(producto);
     return `
@@ -71,7 +71,7 @@ function tarjetaProducto(producto){
     `;   
 };
 
-// genera las tarjetas del carrito
+// Genera las tarjetas del carrito
 function tarjetaProductoCarrito(productoCarrito){
 
     return `
@@ -97,7 +97,7 @@ function tarjetaProductoCarrito(productoCarrito){
     `   
 };
 
-// agrega un producto al carrito o incrementa en cantidadAAumentar su cantidad
+// Agrega un producto al carrito o incrementa en cantidadAAumentar su cantidad
 function agregarAlCarrito(id, cantidadAAumentar){
 
     let producto = buscaProdId(id);
@@ -132,7 +132,7 @@ function agregarAlCarrito(id, cantidadAAumentar){
     muestraCarrito(carrito);
 }
 
-// quita un producto al carrito o disminuye en cantidadADisminuir su cantidad
+// Quita un producto al carrito o disminuye en cantidadADisminuir su cantidad
 function quitarDelCarrito(id, cantidadADisminuir){
 
     let producto = buscaProdId(id);
@@ -182,7 +182,7 @@ function buscaProdId(id) {
     return productos.filter((e) => {if (e.id === id) {return e}})[0];
 }
 
-// devuelve el indice donde encontró el articulo
+// Devuelve el indice donde encontró el articulo
 function buscaProdCarritoId(id) {
 
     return carrito.filter((e) => {
@@ -194,7 +194,7 @@ function buscaProdCarritoId(id) {
     })[0];
 }
 
-//Muestra el carrito
+// Muestra el carrito
 function muestraCarrito(productos) {
 
     let divCarrito = document.getElementById("tarjetasCarrito");
@@ -230,8 +230,7 @@ function clearToast() {
     divToast.classList.remove("show"); 
 }
 
-//Dark mode
-
+// Dark mode
 const btnSwitch = document.querySelector('#switch')
 
 btnSwitch.addEventListener('click', () => {

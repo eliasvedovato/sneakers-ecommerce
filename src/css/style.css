@@ -101,6 +101,16 @@ img{
     max-width: 100%;
 }
 
+.carousel-slide {
+    width: 1920px;
+    height: 1080px;
+}
+
+.img-carousel {
+    width: 1920px;
+    height: 720px;
+}
+
 main{
     padding: 50px 1%;
     width: 100%;
@@ -121,7 +131,7 @@ main{
 .info{
     padding: 50px;
     margin: 25px 50px 50px 50px;
-    border: 3px outset #ccc;
+    border: 1px solid rgba(243, 167, 123, 0.425);
 }
 .info:hover{
     box-shadow: 0 12px 24px hsla(0, 0%, 10%, .2);
@@ -317,8 +327,9 @@ main{
     border-radius: .3rem;
     padding: 0.5rem;
     width: 100%;
-    border-bottom: 1px solid #ccc;
+    border: 1px solid rgba(243, 167, 123, 0.425);
 }
+
 .articulos:hover{
     box-shadow: 0 12px 24px hsla(0, 0%, 10%, .5);
 }
