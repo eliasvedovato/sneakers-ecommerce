@@ -1,0 +1,122 @@
+* {
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 5px;
+}
+
+.nav-main {
+    height: 100px;
+    width: 100%;
+    border-bottom: 0.5px solid rgb(224, 211, 211);
+    display: flex; align-items: center;
+    justify-content: space-evenly;
+}
+
+@media screen and (min-width: 830px) {
+    .nav-main a{
+        display: flex; flex-direction: column;
+        /* height: 15rem; */
+    }
+}
+
+.nav-links{
+    color: #999794;
+    font-size: 15px;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-links:hover{
+    color: #F08A00;
+}
+
+.nav-links:hover::after{
+    content: '';
+    height: .5rem;
+    background-color: #F08A00;
+    position: absolute;
+    top: 3.5rem; left: 0%;
+    width: 100%;
+}
+
+.nav-sneaker {
+    font-size: 30px;
+    font-weight: 800;
+    font-style: none;
+    text-decoration: none;
+    color: #000;
+}
+
+.carro{
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.avatar{
+    background-color: #F08A00;
+    border: 2px solid #F08A00;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.products-grid{
+    display: grid;
+    gap: 1rem; margin-top: 4rem;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.container-img{
+    width: 100%;
+    padding: .9rem;
+    display: flex;
+    justify-content: center;
+}
+
+.container-img > img{
+    object-fit: cover;
+}
+
+.articulos > strong{
+    background-color: #F08A00;
+    border-radius: 3px;
+    padding: 0.4rem;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.articulos > strong:hover{
+    background-color: #fab048;
+}
+
+.articulos{
+    overflow: hidden;
+    border-radius: .3rem;
+    padding: 0.5rem;
+    width: 100%;
+    border: 1px solid rgba(243, 167, 123, 0.425);
+}
+
+.articulos:hover{
+    box-shadow: 0 12px 24px hsla(0, 0%, 10%, .5);
+}
