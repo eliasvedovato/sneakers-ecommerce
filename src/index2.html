@@ -14,13 +14,12 @@
         <title>Sneakers.com</title>
         <script src="../javascript/consulta.js"></script>
         <script src="https://kit.fontawesome.com/551b5bf235.js" crossorigin="anonymous"></script>
-        
-        
     </head>
     <body onload="inicio()">
         <header>
             <nav class="nav-main">
                 
+
                 <img src="./images/icono-principal/icono1-mediano.png" alt="icono-zapas">
                 <a href="./index2.html" class="nav-sneaker">Sneakers</a>
                 <a href="./colecciones.html" class="nav-links after">Colecciones</a>
@@ -118,8 +117,7 @@
                         <span><img src="./images/icon-plus.svg" alt="plus" class="plus"></span>
                     </div>
                     <div class="carrito-main">
-                        <img src="./images/icon-cart.svg" alt="carrito" class="carrito">
-                        <strong class="cart">Add to cart</strong>
+                        <strong>Add to cart</strong>
                     </div>
                 </div>
             </section>
@@ -130,12 +128,12 @@
         <section class="cart-section">
             <div class="contenedor-cart">
                 <h3>Su compra:</h3>
-                <p>Su carrito esta vacio</p>
+                <div id="tarjetasCarrito" class="carrito">No hay articulos en el carrito</div>
                 <button class="close-cart">Salir</button>
             </div>
         </section>
 
-        <!-- Login Section -->
+        <!-- Login -->
         <section id="contenedor-login">
     
         </section>
@@ -144,24 +142,15 @@
         <!-- <div id="tarjetasCarrito" class="products-grid">No hay articulos en el carrito</div> -->
     </main>
 
-   <!-- MODEL CART-ICON  -->
-    <section class="sec-modal">
-        <div class="contenedor-modal">
-            <h3 id="h3titulo-modal">
-                Su compra:
-            </h3>
-            <p id="paragraph-modal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae quas expedita quia eaque fuga voluptate facilis mollitia eligendi qui harum?</p>
-            <button class="modalClose">Salir</button>
-        </div>
-    </section>
-
-    <div id="toast" onclick="clearToast()"></div>
+        <div id="toast" onclick="clearToast()"></div>
 
         <!-- JAVASCRIPT -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
        
         <script src="../javascript/main.js"></script>
+
         <script src="../javascript/model.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
     </body>
 </html>
