@@ -108,7 +108,7 @@ img{
 }
 
 .slide img {
-    height: 70vh;
+    height: 80vh;
 }
 
 .carousel-caption {
@@ -229,6 +229,7 @@ main{
     align-items: center;
     text-decoration: none;
 }
+
 .close::after{
     content: 'X';
     color: #fff;
@@ -237,10 +238,12 @@ main{
 
 .products-grid{
     display: grid;
-    gap: 1rem; margin-top: 4rem;
+    gap: 1rem;
+    margin-top: 4rem;
     grid-auto-flow: dense;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 }
+
 .carrito{ 
     height: 100%; width: 100%;
     text-align: center;
