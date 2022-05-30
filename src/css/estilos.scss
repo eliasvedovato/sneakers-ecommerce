@@ -68,13 +68,31 @@ body {
 
         .info {
             border: 1px solid rgba(126, 124, 124, 0.562);
+            
             &:hover {
                 box-shadow: 0 12px 24px rgba(139, 137, 137, 0.2);
             }
         }
         
+        .img-grande {
+            border: 2px solid rgba(182, 179, 179, 0.562);
+            
+            &:hover {
+                box-shadow: 0 12px 24px rgba(139, 137, 137, 0.2);
+            }
+        }
+        
+        .border-img{
+            border: 1px solid rgba(126, 124, 124, 0.562);
+            
+            &:hover{
+                box-shadow: 0 12px 24px rgba(139, 137, 137, 0.2);
+            }            
+        }
+        
         .articulos {
             border: 1px solid rgba(126, 124, 124, 0.562);
+
             &:hover {
                 box-shadow: 0 12px 24px rgba(139, 137, 137, 0.2);
             }

@@ -157,10 +157,10 @@ img{
     overflow-y: scroll;
 }
 
-.carrito .container-img{
-    /* padding: 0rem; */
-    /* display: grid; */
-}
+/* .carrito .container-img{
+    padding: 0rem;
+    display: grid;
+} */
 
 .carrito .articulos{
     margin-top: 1rem;
@@ -178,9 +178,9 @@ img{
     justify-content: center;
 }
 
-.container-img > img{
-    /* object-fit: cover; */
-}
+/* .container-img > img{
+    object-fit: cover;
+} */
 
 .articulos > strong{
     background-color: #F08A00;
