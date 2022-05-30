@@ -81,6 +81,24 @@ body.dark .info:hover {
           box-shadow: 0 12px 24px rgba(139, 137, 137, 0.2);
 }
 
+body.dark .img-grande {
+  border: 2px solid rgba(182, 179, 179, 0.562);
+}
+
+body.dark .img-grande:hover {
+  -webkit-box-shadow: 0 12px 24px rgba(139, 137, 137, 0.2);
+          box-shadow: 0 12px 24px rgba(139, 137, 137, 0.2);
+}
+
+body.dark .border-img {
+  border: 1px solid rgba(126, 124, 124, 0.562);
+}
+
+body.dark .border-img:hover {
+  -webkit-box-shadow: 0 12px 24px rgba(139, 137, 137, 0.2);
+          box-shadow: 0 12px 24px rgba(139, 137, 137, 0.2);
+}
+
 body.dark .articulos {
   border: 1px solid rgba(126, 124, 124, 0.562);
 }
